@@ -1,0 +1,35 @@
+{
+  "name": "loads-js",
+  "version": "1.0.0",
+  "description": "loads javascript by inserting a script tag",
+  "main": "es5.js",
+  "scripts": {
+    "js":"6to5 --modules commonInterop es6.js > es5.js",
+    "prepublish":"npm run js",
+    "test": "node test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brianleroux/loads-js"
+  },
+  "keywords": [
+    "loadsjs",
+    "js",
+    "loader",
+    "dynamic",
+    "script",
+    "browserify",
+    "inject"
+  ],
+  "author": "Brian LeRoux <b@brian.io>",
+  "license": "Apache2",
+  "bugs": {
+    "url": "https://github.com/brianleroux/loads-js/issues"
+  },
+  "homepage": "https://github.com/brianleroux/loads-js",
+  "devDependencies": {
+    "6to5": "^1.15.0",
+    "tap-spec": "^2.1.2",
+    "tape": "^3.0.3"
+  }
+}
